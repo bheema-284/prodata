@@ -15,7 +15,7 @@ export const HomePage = () => {
           display: 'grid',
           gridTemplateColumns: 'repeat(4, 25%)',
           gap: '10px',
-          width: '80%',
+          width: '90%',
           margin: 'auto',
           paddingTop: '50px',
         }}>
@@ -24,13 +24,20 @@ export const HomePage = () => {
           //return <Link to={`/`}>{<>el.image</><>el.title</>}</Link>;
           return (
             <div>
-              <img src={el.image} alt="" style={{ width: '150px', height:"100px"}} />
-              <div
-                style={{                  
-                  width: '90%',
-                  margin: 'auto',                  
-                }}>
-                <h2 className="productName">{el.title}</h2>
+              <img
+                src={el.image}
+                alt=""
+                style={{ width: '150px', height: '100px' }}
+              />
+              <div>
+                <h2 className="productName">
+                  <Link
+                    to={`/products/${el.id}`}
+                    className="productName"
+                    style={{ textDecoration: 'none' }}>
+                    {el.title}
+                  </Link>
+                </h2>
                 <h5 className="productPrice">Price : {el.price}</h5>
               </div>
             </div>
