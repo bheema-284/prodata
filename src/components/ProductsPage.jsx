@@ -57,9 +57,9 @@ export const ProductsPage = () => {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(4, 35%)',
+          gridTemplateColumns: 'repeat(3, 33%)',
           justifyContent: 'space-evenly',
-          width: '500px',
+          width: '80%',
           margin: 'auto',
           paddingTop: '50px',
         }}>
@@ -73,9 +73,9 @@ export const ProductsPage = () => {
             className="container"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(4, 35%)',
+              gridTemplateColumns: 'repeat(3, 33%)',
               justifyContent: 'space-evenly',
-              width: '500px',
+              width: '80%',
               margin: 'auto',
               paddingTop: '10px',
             }}>

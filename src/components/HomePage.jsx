@@ -1,3 +1,5 @@
+import './styles.css';
+
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
@@ -10,26 +12,14 @@ export const HomePage = () => {
   }, []);
   return (
     <>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(4, 25%)',
-          gap: '10px',
-          width: '90%',
-          margin: 'auto',
-          paddingTop: '50px',
-        }}>
+      <div className="data">
         {/* Iterate over products and show links */}
         {mockData.map((el) => {
           //return <Link to={`/`}>{<>el.image</><>el.title</>}</Link>;
           return (
-            <div>
-              <img
-                src={el.image}
-                alt=""
-                style={{ width: '150px', height: '100px' }}
-              />
-              <div>
+            <div className="data1">
+              <img className="img" src={el.image} alt="" />
+              <div className="data2">
                 <h2 className="productName">
                   <Link
                     to={`/products/${el.id}`}
